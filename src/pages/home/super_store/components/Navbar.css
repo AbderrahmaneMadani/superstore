@@ -1,0 +1,10 @@
+nav {
+    background-color:  aqua;
+}
+img {
+    width: 15px;
+}
+p{
+    display: inline;
+    padding-left: 5px;
+}
