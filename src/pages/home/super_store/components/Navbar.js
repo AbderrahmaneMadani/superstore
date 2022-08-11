@@ -1,11 +1,17 @@
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import Typography from "@mui/material/Typography"
 
 import phoneIcon from "./telephone.png"
 import mailIcon from "./email.png"
 import "./Navbar.css"
+
+
 function Navbar() {
     
     return (
         <header>
+            <Typography variant='h1'>hello, world!</Typography>
             <div className="contact">
                 <div className="phone">
                     <img src={phoneIcon} alt="" />
@@ -24,6 +30,7 @@ function Navbar() {
                     <li><b>USD</b></li>
                 </ul>
             </nav>
+            <Button variant="contained">Hello World</Button>
         </header>
     );
   }
