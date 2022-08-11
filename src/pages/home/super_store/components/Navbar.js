@@ -1,16 +1,30 @@
 
 import phoneIcon from "./telephone.png"
+import mailIcon from "./email.png"
 import "./Navbar.css"
 function Navbar() {
     
     return (
-        <nav>
-            <h1>Navbar hello</h1>
+        <header>
             <div className="contact">
-                <img src={phoneIcon} alt="" />
-                <p>+88012 3456 7894</p>
+                <div className="phone">
+                    <img src={phoneIcon} alt="" />
+                    <p>+88012 3456 7894</p>
+                </div>
+                <div className="mail">
+                    <img src={mailIcon} alt="" />
+                    <p>support@ui-lib.com</p>
+                </div>  
             </div>
-        </nav>
+            <nav>
+                <ul className="nav_links" alt>
+                    <li><a className="nav-link" href="#">ThemeFAQ"s</a></li>
+                    <li><a className="nav_link" href="#">Need Help?</a></li>
+                    <li><b>EN</b></li>
+                    <li><b>USD</b></li>
+                </ul>
+            </nav>
+        </header>
     );
   }
   

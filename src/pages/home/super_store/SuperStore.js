@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar";
+import "./SuperStore.css";
 
 function SuperStore(){
     return(
