@@ -80,18 +80,13 @@ function Navbar1 (){
                                         </Select>
                                     </Fab> 
                                 </FormControl>
-                            </ThemeProvider>
                                 
-                               
-                                
+                            </ThemeProvider>  
                         </Toolbar>     
-                    </Box>
-                    
+                    </Box>   
                 </AppBar>   
-
             </header>
         </Box>
-        
     );
 }
 
