@@ -14,14 +14,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import { flexbox } from '@mui/system';
 
 function Topbar(){
-
-  // const Item = styled(Paper)(({ theme }) => ({
-  //   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  //   ...theme.typography.body2,
-  //   // padding: theme.spacing(0),
-  //   textAlign: 'center',
-  //   color: theme.palette.text.secondary,
-  // }));
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
@@ -52,7 +44,6 @@ function Topbar(){
     return(
         <>
          <main>
-
          <Grid
           container
           direction="row"
@@ -60,7 +51,6 @@ function Topbar(){
           alignItems="center"
           sx={{padding:'100px 19.5% 0 19.5%'}}
         >
-         
             <Item>
               <a href='https://bazar-react.vercel.app/'>
                 <img src={logo} alt='' height={'34px'}  />
@@ -68,22 +58,19 @@ function Topbar(){
             </Item>
 
             <Item>
-              <Box sx={{ flexGrow: 1 , border:'1px solid gray' , borderRadius:'50px', "&:hover":{borderColor:'red'} }}>
-                <Grid container spacing={0}>
+              <Box  sx={{ flexGrow: 1 , border:'1px solid gray' , borderRadius:'50px', "&:hover":{borderColor:'red'} , width:'100%'}}>
+                <Grid container spacing={4}>
                   <Grid item xs={8}>
-                    {/* <Item><SearchBar/></Item> */}
                     <SearchBar/>
                   </Grid>
-                  <Grid item xs={4}>
-                    {/* <Item><SelectCategory/></Item> */}
-                    <SelectCategory/>
+                  <Grid item xs={4} >
+                    <SelectCategory sx={{bgcolor:'gray', borderRadius:'50px'}}/>
                   </Grid>
                 </Grid>
               </Box>
               
             </Item>
             <Item>
-              
                 <Grid container spacing={0}>
                   <Item>
                     <IconButton sx={{ padding: 0}}>
@@ -99,44 +86,9 @@ function Topbar(){
                     </IconButton>
                   </Item>
                   
-                </Grid>
-
-                
-              
+                </Grid>     
             </Item>
-
         </Grid>
-
-
-
-
-          
-        <Box flexDirection={'row'} sx={{display:'inline-block',  margin:'100px 0 0 19.5%'}}>
-        <Toolbar>
-            <a href='https://bazar-react.vercel.app/'>
-            <img src={logo} alt='' height={'34px'}  />
-            </a>
-
-            <Box sx={{ flexGrow: 1 , border:'1px solid gray' , borderRadius:'50px', "&:hover":{borderColor:'red'} }}>
-              <Grid container spacing={0}>
-                <Grid item xs={8}>
-                  {/* <Item><SearchBar/></Item> */}
-                  <SearchBar/>
-                </Grid>
-                <Grid item xs={4}>
-                  {/* <Item><SelectCategory/></Item> */}
-                  <SelectCategory/>
-                </Grid>
-              </Grid>
-            </Box>
-            {/* <Box display={'flex'} sx={{border:'2px solid'}}>
-              <SearchBar/>
-              <SelectCategory/>
-            </Box> */}
-            
-              </Toolbar>
-            </Box>
-        
         </main>
         </>
     );
@@ -153,16 +105,10 @@ function SearchBar(){
         position: 'relative',
         borderRadius: theme.shape.borderRadius,
         height:'100%',
-       
         margin:0
-        
         ,
         backgroundColor: alpha(theme.palette.common.white, 0.15),
-        
-        // [theme.breakpoints.up('sm')]: {
-        //   marginLeft: theme.spacing(3),
-        //   width: 'auto',
-        // },
+      
         }));
       
       const SearchIconWrapper = styled('div')(({ theme }) => ({
@@ -321,8 +267,8 @@ const top100Films = [
 
     return(
         <>
-         <FormControl sx={{  display:'inline-block'}} >
-            <Search sx={{"&:hover":{border:'none',width:'100px',}}}>
+         <FormControl  >
+            <Search sx={{minWidth:'400px',}}>
                 <SearchIconWrapper >
                 <SearchIcon  />
                 </SearchIconWrapper>
@@ -330,7 +276,6 @@ const top100Films = [
                 {/* <Stack spacing={2} sx={{ width: 300 }}> */}
                   <Autocomplete
                      
-                      sx={{Width:'100%'}}
                       freeSolo
                       id="free-solo-2-demo"
                       disableClearable
@@ -338,6 +283,8 @@ const top100Films = [
                       renderInput={(params) => (
                         <TextField
                           sx={{ paddingLeft:'30px',
+                            paddingRight:'100px',
+                            
                             "&& fieldset": {
                               // border:"1px solid red"
                               border:'none'
@@ -380,7 +327,7 @@ function SelectCategory(){
 
   
 return(
-  <FormControl fullWidth sx={{border:' none', display:'inline-block'}}>
+  <FormControl sx={{border:' none', display:'inline-block', borderLeft:'1px solid gray',    backgroundColor: '#F6F9FC' , borderTopRightRadius:'27.5px',borderBottomRightRadius:'27.5px' , marginRight:'5px', width:'99%'}}>
     <Select
       id="category-select"
       value={category} 
@@ -390,7 +337,8 @@ return(
         "&& fieldset": {
           // border:"1px solid red"
           border:'none'
-        } 
+        },
+        
       }}
     >
       <MenuItem value=''>All Category</MenuItem>
