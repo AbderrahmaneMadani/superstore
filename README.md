@@ -1,6 +1,18 @@
 ### `project Link`
 https://bazar-react.vercel.app/superstore-shop
 
+#List of  missing tasks
+  . component\Topbar
+      - Add methods when I clicked into any search result get a page of products have the same words with resulte.
+      - Add methods when I clicked on avatar or shoppingBag icon do some functionality.
+      - Fix width problem in searchBar with select category
+      - 
+  . Add -> component\NavigationBar
+    - categories 
+    - home list 
+    -mega menu 
+    - ....
+  . 
 
 # Getting Started with Create React App
 
