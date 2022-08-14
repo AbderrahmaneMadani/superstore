@@ -7,7 +7,7 @@ https://bazar-react.vercel.app/superstore-shop
       - Add methods when I clicked on avatar or shoppingBag icon do some functionality.
       - Fix width problem in searchBar with select category
       - 
-  # Add -> component\NavigationBar
+  # add -> component\NavigationBar
     - categories 
     - home list 
     -mega menu 
