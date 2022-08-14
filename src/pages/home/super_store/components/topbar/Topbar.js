@@ -95,7 +95,7 @@ function Topbar(){
 }
 export default Topbar;
 
-
+// I need to add methods when I clicked into any search result get a page of products have the same words with resulte.
 function SearchBar(){
     const [searchValue,setSearchValue] =React.useState('');
     const handleChangeSearchValue = (event) => {
